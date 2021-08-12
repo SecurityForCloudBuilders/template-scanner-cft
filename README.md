@@ -6,9 +6,7 @@ Uma meneira de integrar mais segurança ao seu CI e sua infraestrutura como cód
  - Se desejar mais informações sobre o seu código antes de realizar o deployment, você pode utilizar a <a href="https://marketplace.visualstudio.com/items?itemName=raphaelbottino.cc-template-scanner"> extensão do Cloud Conformity </a> no seu Visual Studio Code!
 
 
-[![Cloud Formation Scan](https://github.com/SecurityForCloudBuilders/template-scanner-ctf/actions/workflows/template-scanner-ctf.yml/badge.svg?branch=main)](https://github.com/SecurityForCloudBuilders/template-scanner-ctf/actions/workflows/template-scanner-ctf.yml)
-
-<img src="img/template-scanner-overview.png" alt="ConformityPipeline"> </img>
+<img src="img/template-scanner-overview.PNG" alt="ConformityPipeline"> </img>
 
 
 ### Você precisará:
