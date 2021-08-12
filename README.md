@@ -110,6 +110,8 @@ Uma meneira de integrar mais segurança ao seu CI e sua infraestrutura como cód
 
 <img src="img/scan-results.PNG" alt="scan-results"> </img>
 
+<img src="img/failures-limit-exceeded.PNG" alt="failures-limit-exceeded"> </img>
+
 
 </details>
 
