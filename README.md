@@ -11,7 +11,7 @@ Uma meneira de integrar mais segurança ao seu CI e sua infraestrutura como cód
 
 ### Você precisará:
 
--   1 Conta da AWS com usuário com que tenha direitos de administrador ou direitos de executar CloudFormation Templates;
+-   1 Conta da AWS com usuário que tenha direitos de administrador ou direitos de executar CloudFormation Templates;
 -   Ter o Git instalado localmente na sua máquina; 
 -   1 Conta já criada no <a href="https://cloudone.trendmicro.com/"> Trend Micro Cloud One Conformity</a>; 
 
