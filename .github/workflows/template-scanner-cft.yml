@@ -46,6 +46,6 @@ jobs:
       - name: Deploy to AWS CloudFormation Deploy CloudFormation Stack Action for GitHub Actions
         uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
         with:
-          name: s3-ctf-github-actions
+          name: s3-ctf-securityForCloudBuilders
           template: s3-bucket-sfcb.yml
           no-fail-on-empty-changeset: "1"
