@@ -1,0 +1,51 @@
+# This is a basic workflow to help you get started with Actions
+
+name: s3ctf-template-scanner-pipeline
+
+# Controls when the workflow will run
+on: 
+  push:
+    branches: 
+      - master
+      - main
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  CloudFormation-Scan:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Cloud One Conformity Pipeline Scanner
+        uses: raphabot/conformity-template-scanner-pipeline@v1.0.0
+        env: 
+          cc_apikey: ${{ secrets.apikey }}
+          maxExtreme: 0
+          maxVeryHigh: 1
+          maxHigh: 5
+          maxMedium: 15
+          maxLow: 15
+          cc_region: us-west-2
+          templatePath: s3-bucket-sfcb.yml
+          
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        # aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }} # if you have/need it
+          aws-region: us-west-2
+          
+      - name: Deploy to AWS CloudFormation Deploy CloudFormation Stack Action for GitHub Actions
+        uses: aws-actions/aws-cloudformation-github-deploy@v1.0.3
+        with:
+          name: s3-ctf-github-actions
+          template: s3-bucket-sfcb.yml
+          no-fail-on-empty-changeset: "1"
