@@ -2,7 +2,7 @@
 
 name: s3ctf-template-scanner-pipeline
 
-# Controls when the workflow will run
+# Controls when the workflow will run and the branched
 on: 
   push:
     branches: 
@@ -11,7 +11,7 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
+  # This workflow contains a single job called "CloudFormation-Scan"
   CloudFormation-Scan:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
+      # Runs the Conformity Template Scanner and block the buid process if the results exceed the parameters set below
       - name: Cloud One Conformity Pipeline Scanner
         uses: raphabot/conformity-template-scanner-pipeline@v1.0.0
         env: 
