@@ -29,7 +29,7 @@ jobs:
           cc_apikey: ${{ secrets.apikey }}
           maxExtreme: 0
           maxVeryHigh: 1
-          maxHigh: 1
+          maxHigh: 3
           maxMedium: 15
           maxLow: 15
           cc_region: us-west-2
