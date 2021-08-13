@@ -3,4 +3,4 @@ Resources:
     Type: 'AWS::S3::Bucket'
     DeletionPolicy: Retain
     Properties:
-      BucketName: sfcb-ctf-bucket-us-west-2
+      BucketName: sfcb-ctf-buckets-us-west-2
