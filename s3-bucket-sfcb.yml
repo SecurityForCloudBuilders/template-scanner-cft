@@ -3,6 +3,6 @@ Resources:
     Type: 'AWS::S3::Bucket'
     DeletionPolicy: Retain
     Properties:
-      BucketName: sfcb-ctf-bucket-us-west-2
+      BucketName: igors-sfcb-ctf-bucket-us-west-2
       VersioningConfiguration:
         Status: Suspended
