@@ -5,4 +5,4 @@ Resources:
     Properties:
       BucketName: sfcb-ctf-bucket-us-west-2
       VersioningConfiguration:
-        Status: Enabled
+        Status: Suspended

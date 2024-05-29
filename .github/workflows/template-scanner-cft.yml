@@ -23,16 +23,15 @@ jobs:
         uses: actions/checkout@v2
 
       # Runs the Conformity Template Scanner and block the buid process if the results exceed the parameters set below
-      - name: Cloud One Conformity Pipeline Scanner
-        uses: raphabot/conformity-template-scanner-pipeline@v1.0.0
+      - name: Cloud Posture Conformity Pipeline Scanner
+        uses: igorschultz/cloud-posture-template-scanner-pipeline@v1.0.0
         env: 
-          cc_apikey: ${{ secrets.apikey }}
+          v1_apikey: ${{ secrets.apikey }}
           maxExtreme: 0
           maxVeryHigh: 1
           maxHigh: 3
           maxMedium: 15
           maxLow: 15
-          cc_region: us-west-2
           templatePath: s3-bucket-sfcb.yml
           
       - name: Configure AWS Credentials
