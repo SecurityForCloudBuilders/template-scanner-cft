@@ -24,14 +24,14 @@ jobs:
 
       # Runs the Conformity Template Scanner and block the buid process if the results exceed the parameters set below
       - name: Cloud Posture Conformity Pipeline Scanner
-        uses: igorschultz/cloud-posture-template-scanner-pipeline@v1.0.0
+        uses: igorschultz/cloud-posture-template-scanner-pipeline@v1.0.1
         env: 
           v1_apikey: ${{ secrets.apikey }}
           maxExtreme: 0
           maxVeryHigh: 1
           maxHigh: 3
-          maxMedium: 15
-          maxLow: 15
+          maxMedium: 5
+          maxLow: 5
           templatePath: s3-bucket-sfcb.yml
           
       - name: Configure AWS Credentials
