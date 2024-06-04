@@ -24,7 +24,7 @@ jobs:
 
       # Runs the Conformity Template Scanner and block the buid process if the results exceed the parameters set below
       - name: Cloud Posture Conformity Pipeline Scanner
-        uses: igorschultz/cloud-posture-template-scanner-pipeline@v1.0.1
+        uses: igorschultz/cloud-posture-template-scanner-pipeline@v1.0.2
         env: 
           v1_apikey: ${{ secrets.apikey }}
           maxExtreme: 0
